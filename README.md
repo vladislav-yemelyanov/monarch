@@ -41,6 +41,18 @@
 💡 `monarch` prints the selected project path to **stdout**,
 making it easy to compose with shells and editors.
 
+## Keyboard Shortcuts
+
+Navigate and manage projects quickly using the following keyboard shortcuts:
+
+Ctrl + P → Move up through the list
+
+Ctrl + N → Move down through the list
+
+Enter → Select the highlighted project
+
+Esc → Exit the menu
+
 ---
 
 ## Platform support
