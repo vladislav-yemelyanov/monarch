@@ -15,7 +15,7 @@
 - Recursively scans directories and finds repositories containing a `.git` folder.
 
 ⚡ **Instant project switching**
-- Select a repository and jump into it in seconds.
+- Select a repository and open it instantly.
 
 🔎 **Interactive fuzzy search**
 - Fuzzy matching on full paths
