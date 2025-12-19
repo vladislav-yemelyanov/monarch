@@ -52,12 +52,12 @@ If you often jump between multiple Git repositories, `monarch` helps you:
 `monarch` is currently distributed as a standalone binary.
 Homebrew support is planned for the future.
 
-1. Download the latest release [soon]
+1. Download the latest release [IN PROGRESS]
 2.
 ```bash
 sudo mv monarch /usr/local/bin/monarch
 ```
-### (Optional) Shell integration
+### Shell integration
 
 #### Fish
 You can create a small helper function to launch monarch more conveniently:
