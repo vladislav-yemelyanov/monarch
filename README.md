@@ -74,7 +74,13 @@ You can create a small helper function to launch monarch more conveniently:
 ```fish
 function mon
     set dir (monarch --projects-dir=/Users/{NAME}/Documents/projects)
+
+    if test -z "$dir"
+      return # dir is empty - exit
+    end
+
     cd $dir; or return
+
     hx . # hx, nvim, etc.
 end
 
@@ -94,8 +100,15 @@ For zsh or bash, add an alias to your shell config (`~/.zshrc` or `~/.bashrc`):
 ```bash
 mon() {
   local dir
+
   dir="$(monarch --projects-dir="/Users/{NAME}/Documents/projects")" || return
+
+  if [ -z "$dir" ]; then
+     return # dir is empty -> exit
+  fi
+
   cd "$dir" || return
+
   hx . # hx, nvim, etc.
 }
 ```

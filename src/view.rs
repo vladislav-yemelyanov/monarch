@@ -52,22 +52,25 @@ pub fn open_view(
 
     let items = item_reader.of_bufread(Cursor::new(input));
 
-    let selected = Skim::run_with(&options, Some(items))
-        .and_then(|out| {
-            if out.is_abort {
-                None
-            } else {
-                out.selected_items
-                    .first()
-                    .map(|item| item.output().to_string())
-            }
-        })
-        .ok_or(OpenViewError::SkimRunFailed)?;
+    let selected = Skim::run_with(&options, Some(items));
 
-    let restored = if selected.starts_with(base_path) {
-        selected.clone()
-    } else {
-        format!("{}{}", base_path, selected)
+    let restored = match selected {
+        Some(out) if !out.is_abort => {
+            let selected_item = out
+                .selected_items
+                .first()
+                .map(|item| item.output().to_string())
+                .ok_or(OpenViewError::SkimRunFailed)?;
+
+            if selected_item.starts_with(base_path) {
+                selected_item
+            } else {
+                format!("{}{}", base_path, selected_item)
+            }
+        }
+        _ => {
+            return Ok(()); // exit
+        }
     };
 
     {
