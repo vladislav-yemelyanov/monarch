@@ -8,6 +8,7 @@ It is designed for developers who work with many repositories and want a quick w
 > ⚠️ **Note**: At the moment, `monarch` is tested and supported only on **macOS**.
 > Other operating systems may work, but are not officially supported yet.
 
+
 ---
 
 ## Features
@@ -37,12 +38,21 @@ If you often jump between multiple Git repositories, `monarch` helps you:
 
 ---
 
+## Platforms
+
+- [x] x86_64-apple-darwin
+- [x] aarch64-apple-darwin
+- [x] x86_64-unknown-linux-gnu
+- [ ] x86_64-pc-windows-gnu
+
+---
+
 ## Manual Installation
 
 `monarch` is currently distributed as a standalone binary.
 Homebrew support is planned for the future.
 
-1. Download the latest release from GitHub Releases
+1. Download the latest release [soon]
 2.
 ```bash
 sudo mv monarch /usr/local/bin/monarch
