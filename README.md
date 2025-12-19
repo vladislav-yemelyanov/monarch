@@ -2,48 +2,56 @@
 
 ![Demo](https://raw.githubusercontent.com/vladislav-yemelyanov/monarch/main/mon.gif)
 
-**monarch** is a fast CLI tool for discovering and opening projects on your system.
-It is designed for developers who work with many repositories and want a quick way to search, preview, and open projects in their favorite editor.
+**monarch** is a fast interactive CLI for instantly finding and opening Git repositories.
 
-> ⚠️ **Note**: At the moment, `monarch` is tested and supported only on **macOS**.
-> Other operating systems may work, but are not officially supported yet.
-
+> ⚠️ **Note**: `monarch` is fully supported on **macOS**.
+> Linux builds are available but considered experimental.
 
 ---
 
 ## Features
 
-- 🔍 **Project discovery**
-  Scans directories and finds all projects that contain a `.git` folder.
+- 🔍 **Automatic Git repository discovery**
+  Recursively scans directories and finds repositories containing a `.git` folder.
 
-- 📂 **Quick project selection**
-  Select any project from the list and instantly open it in your editor (e.g. **Helix**, **Neovim**, etc.).
+- ⚡ **Instant project switching**
+  Select a repository and jump into it in seconds.
 
-- 🔎 **Interactive search**
-  - Fuzzy search through project paths
-  - Highlighted matches while typing
-  - File preview for better context
+- 🔎 **Interactive fuzzy search**
+  - Fuzzy matching on full paths
+  - Live highlighted results
+  - Project preview for context
 
 - 🕘 **Recently used projects**
-  Recently opened projects are always shown at the bottom of the list — making it faster to switch between frequently used repositories.
+  Frequently used projects are pinned at the bottom for quick access.
 
 ---
 
 ## Why monarch?
 
-If you often jump between multiple Git repositories, `monarch` helps you:
-- avoid manually navigating directories,
-- keep frequently used projects close at hand,
-- open projects in your editor with minimal friction.
+- Faster than manual `cd` navigation
+- No need to remember project paths
+- Editor-agnostic
+- Follows the Unix philosophy: does one thing well and composes nicely with shells
 
 ---
 
-## Platforms
+## How it works
 
-- [x] x86_64-apple-darwin
-- [x] aarch64-apple-darwin
-- [x] x86_64-unknown-linux-gnu
-- [ ] x86_64-pc-windows-gnu
+> 💡 `monarch` prints the selected project path to **stdout**,
+> making it easy to compose with shells and editors.
+
+---
+
+## Platform support
+
+| Platform | Status |
+|--------|--------|
+| macOS (Intel / Apple Silicon) | ✅ Fully supported |
+| Linux (x86_64) | ⚠️ Experimental |
+| Windows | ❌ Not supported yet |
+
+Linux builds exist, but have not been extensively tested yet.
 
 ---
 
@@ -52,9 +60,10 @@ If you often jump between multiple Git repositories, `monarch` helps you:
 `monarch` is currently distributed as a standalone binary.
 Homebrew support is planned for the future.
 
-1. Download the latest release [IN PROGRESS]
-2.
+1. [Download the latest release](https://github.com/vladislav-yemelyanov/monarch/releases)
+2. Then:
 ```bash
+chmod +x monarch
 sudo mv monarch /usr/local/bin/monarch
 ```
 ### Shell integration
@@ -70,6 +79,8 @@ function mon
 end
 
 ```
+
+Replace the path with the directory where you keep your repositories.
 
 Restart your shell or reload the config:
 
@@ -88,6 +99,7 @@ mon() {
   hx .
 }
 ```
+Replace the path with the directory where you keep your repositories.
 
 After restart your shell, run:
 
@@ -95,10 +107,31 @@ After restart your shell, run:
 mon
 ```
 
+## Basic usage
+
+```bash
+monarch --projects-dir=/Users/{NAME}/Documents/projects
+```
+
+Replace the path with the directory where you keep your repositories.
+
+## CLI options
+
+- `--projects-dir <path>` — directory to scan for Git repositories
+
 ### Future installation plans
 
 - 🍺 Homebrew formula (once the project is ready for wider distribution)
 - 📦 Prebuilt binaries for Linux and Windows
 - 🤖 Automated install script (curl | sh)
 
-If you like the tool and want Homebrew support — leave a ⭐️ on GitHub!
+---
+
+If you find `monarch` useful:
+- ⭐️ Star the repo
+- 🐞 Report bugs or ideas
+- 💡 Suggest features
+
+---
+
+Built with 🦀 Rust.
