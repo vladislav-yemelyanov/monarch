@@ -1,6 +1,6 @@
 # monarch 👑
 
-![Demo](https://raw.githubusercontent.com/vladislav-yemelyanov/monarch/main/mon.gif)
+![Demo](https://raw.githubusercontent.com/vladislav-yemelyanov/monarch/main/monarch.gif)
 
 **monarch** is a fast interactive CLI for instantly finding and opening Git repositories.
 
