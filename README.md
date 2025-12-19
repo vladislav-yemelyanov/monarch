@@ -11,19 +11,19 @@
 
 ## Features
 
-- 🔍 **Automatic Git repository discovery**
-  Recursively scans directories and finds repositories containing a `.git` folder.
+🔍 **Automatic Git repository discovery**
+- Recursively scans directories and finds repositories containing a `.git` folder.
 
-- ⚡ **Instant project switching**
-  Select a repository and jump into it in seconds.
+⚡ **Instant project switching**
+- Select a repository and jump into it in seconds.
 
-- 🔎 **Interactive fuzzy search**
-  - Fuzzy matching on full paths
-  - Live highlighted results
-  - Project preview for context
+🔎 **Interactive fuzzy search**
+- Fuzzy matching on full paths
+- Live highlighted results
+- Project preview for context
 
-- 🕘 **Recently used projects**
-  Frequently used projects are pinned at the bottom for quick access.
+🕘 **Recently used projects**
+- Frequently used projects are pinned at the bottom for quick access.
 
 ---
 
