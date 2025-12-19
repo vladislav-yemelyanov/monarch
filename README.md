@@ -75,7 +75,7 @@ You can create a small helper function to launch monarch more conveniently:
 function mon
     set dir (monarch --projects-dir=/Users/{NAME}/Documents/projects)
     cd $dir; or return
-    hx .
+    hx . # hx, nvim, etc.
 end
 
 ```
@@ -96,7 +96,7 @@ mon() {
   local dir
   dir="$(monarch --projects-dir="/Users/{NAME}/Documents/projects")" || return
   cd "$dir" || return
-  hx .
+  hx . # hx, nvim, etc.
 }
 ```
 Replace the path with the directory where you keep your repositories.
