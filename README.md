@@ -64,8 +64,11 @@ You can create a small helper function to launch monarch more conveniently:
 
 ```fish
 function mon
-    monarch --editor=hx --projects-dir=/Users/{name}/Documents/projects # editor: hx or nvim
+    set dir (monarch --projects-dir=/Users/{NAME}/Documents/projects)
+    cd $dir; or return
+    hx .
 end
+
 ```
 
 Restart your shell or reload the config:
@@ -78,7 +81,12 @@ source ~/.config/fish/config.fish
 For zsh or bash, add an alias to your shell config (`~/.zshrc` or `~/.bashrc`):
 
 ```bash
-alias mon='monarch --editor=hx --projects-dir=/Users/{name}/Documents/projects' # editor: hx or nvim
+mon() {
+  local dir
+  dir="$(monarch --projects-dir="/Users/{NAME}/Documents/projects")" || return
+  cd "$dir" || return
+  hx .
+}
 ```
 
 After restart your shell, run:

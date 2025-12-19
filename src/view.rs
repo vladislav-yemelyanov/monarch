@@ -1,7 +1,6 @@
 use std::{
     io::{self, Cursor},
     path::PathBuf,
-    process::Command,
 };
 
 use skim::{
@@ -10,7 +9,7 @@ use skim::{
     Skim, SkimOptions,
 };
 
-use crate::{file_manager, recent, Editor};
+use crate::{file_manager, recent};
 
 #[derive(Debug, thiserror::Error)]
 pub enum OpenViewError {
@@ -37,7 +36,6 @@ pub fn open_view(
     home_dir: &PathBuf,
     base_path: &str,
     result: &Vec<String>,
-    editor: &Editor,
 ) -> Result<(), OpenViewError> {
     let mut file = recent::create_recent_projects_file(home_dir)?;
 
@@ -83,12 +81,7 @@ pub fn open_view(
 
         file_manager::write(&mut file, &lines)?;
 
-        let e = match editor {
-            Editor::Hx => "hx",
-            Editor::Nvim => "nvim",
-        };
-
-        Command::new(e).current_dir(&restored).arg(".").status()?;
+        println!("{}", restored);
     }
 
     Ok(())

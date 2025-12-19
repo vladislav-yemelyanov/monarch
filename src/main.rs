@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use clap::{Parser, ValueEnum};
+use clap::Parser;
 use rootcause::Report;
 
 mod file_manager;
@@ -11,17 +11,8 @@ mod view;
 #[derive(Parser)]
 #[command(author, version, about)]
 struct Cli {
-    #[arg(long, value_enum, help = "Choose editor (hx or nvim)")]
-    editor: Editor,
-
     #[arg(short, long)]
     projects_dir: Option<PathBuf>,
-}
-
-#[derive(Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
-enum Editor {
-    Hx,
-    Nvim,
 }
 
 fn main() -> Result<(), Report> {
@@ -49,7 +40,7 @@ fn main() -> Result<(), Report> {
     recent::add_recent_projects_to_paths(&home_dir, &mut paths)?;
 
     // step 4
-    view::open_view(&home_dir, &base_dir, &paths, &cli.editor)?;
+    view::open_view(&home_dir, &base_dir, &paths)?;
 
     Ok(())
 }
