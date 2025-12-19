@@ -38,8 +38,8 @@
 
 ## How it works
 
-> 💡 `monarch` prints the selected project path to **stdout**,
-> making it easy to compose with shells and editors.
+💡 `monarch` prints the selected project path to **stdout**,
+making it easy to compose with shells and editors.
 
 ---
 
