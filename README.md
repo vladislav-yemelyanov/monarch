@@ -73,7 +73,7 @@ You can create a small helper function to launch monarch more conveniently:
 
 ```fish
 function mon
-    set dir (monarch --projects-dir=/Users/{NAME}/Documents/projects)
+    set dir (monarch --projects-dir=/Users/{NAME}/Documents/projects) || return
 
     if test -z "$dir"
       return # dir is empty - exit
