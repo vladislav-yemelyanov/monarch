@@ -163,10 +163,10 @@ Replace the path with the directory where you keep your repositories.
 
 ---
 
-If you find `monarch` useful:
-- ⭐️ Star the repo
-- 🐞 Report bugs or ideas
-- 💡 Suggest features
+❤️ Loving monarch? Help us grow!
+⭐️ Star the repo
+🐞 Report bugs
+💡 Suggest features
 
 ---
 
