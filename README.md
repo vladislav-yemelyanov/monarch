@@ -90,9 +90,9 @@ Homebrew support is planned for the future.
 chmod +x monarch
 sudo mv monarch /usr/local/bin/monarch
 ```
-### Shell integration
+## Shell integration
 
-#### Fish
+### Fish
 You can create a small helper function to launch monarch more conveniently:
 
 ```fish
@@ -118,7 +118,7 @@ Restart your shell or reload the config:
 source ~/.config/fish/config.fish
 ```
 
-#### Zsh / Bash
+### Zsh / Bash
 For zsh or bash, add an alias to your shell config (`~/.zshrc` or `~/.bashrc`):
 
 ```bash
