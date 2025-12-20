@@ -67,6 +67,18 @@ Linux builds exist, but have not been extensively tested yet.
 
 ---
 
+## Installation
+
+### Quick install (macOS/Linux)
+```bash
+curl -fsSL https://raw.githubusercontent.com/vladislav-yemelyanov/monarch/main/install.sh | bash
+```
+
+### Verify installation
+```bash
+monarch --version
+```
+
 ## Manual Installation
 
 `monarch` is currently distributed as a standalone binary.
@@ -147,8 +159,7 @@ Replace the path with the directory where you keep your repositories.
 ### Future installation plans
 
 - 🍺 Homebrew formula (once the project is ready for wider distribution)
-- 📦 Prebuilt binaries for Linux and Windows
-- 🤖 Automated install script (curl | sh)
+- 📦 Prebuilt binaries for Windows
 
 ---
 
