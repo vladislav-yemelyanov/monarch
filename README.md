@@ -65,6 +65,8 @@ Esc → Exit the menu
 
 Linux builds exist, but have not been extensively tested yet.
 
+Windows - [Github Discusion](https://github.com/skim-rs/skim/issues/293#issuecomment-2587946147)
+
 ---
 
 ## Installation
