@@ -165,7 +165,7 @@ Replace the path with the directory where you keep your repositories.
 
 ---
 
-- ❤️ Loving monarch? Help us grow!
+❤️ Loving monarch?
 - ⭐️ Star the repo
 - 🐞 Report bugs
 - 💡 Suggest features
