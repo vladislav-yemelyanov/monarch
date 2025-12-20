@@ -165,10 +165,10 @@ Replace the path with the directory where you keep your repositories.
 
 ---
 
-❤️ Loving monarch? Help us grow!
-⭐️ Star the repo
-🐞 Report bugs
-💡 Suggest features
+- ❤️ Loving monarch? Help us grow!
+- ⭐️ Star the repo
+- 🐞 Report bugs
+- 💡 Suggest features
 
 ---
 
